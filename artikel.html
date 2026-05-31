@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel Edukasi - ZenPlay</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav id="navbar">
+        <div class="logo">🎮 ZenPlay</div>
+        
+        <!-- Ikon Hamburger Menu untuk Mobile -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul id="nav-links">
+            <li><a href="index.html">Kembali ke Beranda</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Artikel -->
+    <header class="article-header">
+        <div class="hero-content">
+            <h1>Digital Wellness: Fakta Ilmiah di Balik Gaming</h1>
+            <p>Baca insight dari sumber terpercaya biar main game tetap GG tanpa ngorbanin kesehatan.</p>
+        </div>
+    </header>
+
+    <!-- Konten Artikel -->
+    <main class="article-content section">
+        
+        <!-- Artikel 1: WHO dan Gaming Disorder -->
+        <article class="card article-box">
+            <span class="badge">Kesehatan Mental</span>
+            <h2>Gaming Disorder Kini Diakui WHO: Mitos atau Fakta?</h2>
+            <p>Sering denger orang tua ngomel kalau kita kecanduan game? Ternyata, di tahun 2018, Organisasi Kesehatan Dunia (WHO) resmi memasukkan <strong>"Gaming Disorder"</strong> ke dalam <em>International Classification of Diseases (ICD-11)</em>.</p>
+            <p>Tapi tenang, nge-game seharian pas <i>weekend</i> nggak otomatis bikin kamu didiagnosis kena gangguan ini. WHO menjelaskan bahwa seseorang baru disebut mengalami Gaming Disorder jika memenuhi 3 syarat selama minimal 12 bulan:</p>
+            <ul>
+                <li>Kehilangan kendali atas intensitas dan durasi bermain.</li>
+                <li>Memprioritaskan game di atas segalanya (makan, tidur, kuliah, sosialisasi).</li>
+                <li>Tetap bermain meskipun sudah ada dampak negatif yang jelas (seperti drop out atau masalah kesehatan).</li>
+            </ul>
+            <div class="source-box">
+                <strong>Referensi Terpercaya:</strong><br>
+                <a href="https://www.who.int/news-room/questions-and-answers/item/addictive-behaviours-gaming-disorder" target="_blank">World Health Organization (WHO) - Addictive behaviours: Gaming disorder</a>
+            </div>
+        </article>
+
+        <!-- Artikel 2: Aturan 20-20-20 -->
+        <article class="card article-box">
+            <span class="badge">Kesehatan Fisik</span>
+            <h2>Aturan 20-20-20: <i>Cheat Code</i> Buat Mata Bebas Pegal</h2>
+            <p>Mata perih, merah, atau pandangan mulai ngeblur pas asyik <i>push rank</i>? Itu namanya <em>Computer Vision Syndrome</em>. Layar monitor memancarkan <i>blue light</i> dan membuat kita jarang berkedip, sehingga mata cepat kering.</p>
+            <p><em>American Academy of Ophthalmology</em> menyarankan sebuah trik simpel yang sering disebut <strong>Aturan 20-20-20</strong>. Caranya:</p>
+            <ul>
+                <li>Setiap <strong>20 menit</strong> menatap layar...</li>
+                <li>Alihkan pandanganmu ke benda yang jaraknya sekitar <strong>20 kaki</strong> (sekitar 6 meter)...</li>
+                <li>Selama minimal <strong>20 detik</strong>.</li>
+            </ul>
+            <p>Waktu 20 detik ini cukup buat mata kamu rileks. Sambil nunggu <i>matchmaking</i> atau <i>respawn</i>, luangkan waktu bentar buat melihat ke luar jendela.</p>
+            <div class="source-box">
+                <strong>Referensi Terpercaya:</strong><br>
+                <a href="https://www.aao.org/eye-health/tips-prevention/computer-usage" target="_blank">American Academy of Ophthalmology - Computers, Digital Devices and Eye Strain</a>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Kampanye Digital Wellness - Sistem Informasi</p>
+    </footer>
+
+    <!-- Floating Background Music -->
+    <button id="music-toggle" class="floating-btn">
+        🎵 Play Lo-Fi
+    </button>
+    <audio id="bg-music" loop>
+        <source src="lofi.mp3" type="audio/mpeg">
+        Browser kamu tidak mendukung elemen audio.
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

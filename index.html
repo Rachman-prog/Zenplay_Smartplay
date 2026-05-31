@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenPlay - Game Smart, Live Smart</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav id="navbar">
+        <div class="logo">🎮 ZenPlay</div>
+        
+        <!-- Ikon Hamburger Menu untuk Mobile -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul id="nav-links">
+            <li><a href="#edukasi">Apa itu Adiksi?</a></li>
+            <li><a href="#self-check">Self-Check</a></li>
+            <li><a href="#kalkulator">Kalkulator</a></li>
+            <li><a href="#rekomendasi">Game Sehat</a></li>
+            <li><a href="#blog">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header>
+        <div class="hero-content">
+            <h1>Push Rank Boleh,<br> Lupa Waktu Jangan!</h1>
+            <p>Jadilah gamer cerdas. Cek apakah rutinitas gaming-mu masih sehat atau sudah butuh "Touch Grass".</p>
+            <a href="#self-check" class="btn-primary">Mulai Self-Check</a>
+        </div>
+    </header>
+
+    <!-- Edukasi Singkat -->
+    <section id="edukasi" class="section">
+        <h2>Paham Dulu: Apa Itu Gaming Addiction?</h2>
+        <div class="card">
+            <p><strong>Gaming Addiction (Kecanduan Game)</strong> bukanlah sekadar hobi main game. Ini adalah kondisi di mana kamu kehilangan kendali atas waktu bermain, memprioritaskan game di atas aktivitas harian (tidur, kuliah, sosialisasi), dan tetap melanjutkannya meski tahu itu berdampak buruk.</p>
+        </div>
+    </section>
+
+    <!-- Tes Mandiri (Self-Check) -->
+    <section id="self-check" class="section">
+        <h2>Self-Check: Status Gaming Kamu</h2>
+        <div class="quiz-container">
+            <form id="quiz-form">
+                <div class="question">
+                    <p>1. Seberapa sering kamu begadang sampai pagi cuma buat push rank?</p>
+                    <label><input type="radio" name="q1" value="0" required> Jarang/Tidak pernah</label>
+                    <label><input type="radio" name="q1" value="1"> 1-2 kali seminggu</label>
+                    <label><input type="radio" name="q1" value="2"> Hampir setiap hari</label>
+                </div>
+                <div class="question">
+                    <p>2. Apakah kamu merasa emosi/marah saat disuruh berhenti main game?</p>
+                    <label><input type="radio" name="q2" value="0" required> Santai aja</label>
+                    <label><input type="radio" name="q2" value="1"> Kadang agak kesal</label>
+                    <label><input type="radio" name="q2" value="2"> Sangat marah</label>
+                </div>
+                <div class="question">
+                    <p>3. Apakah tugas atau nilai akademis kamu menurun karena game?</p>
+                    <label><input type="radio" name="q3" value="0" required> Aman, semua seimbang</label>
+                    <label><input type="radio" name="q3" value="1"> Ada beberapa yang keteteran</label>
+                    <label><input type="radio" name="q3" value="2"> Ya, hancur lebur</label>
+                </div>
+                <button type="button" class="btn-primary" onclick="calculateResult()">Lihat Hasil</button>
+            </form>
+            <div id="quiz-result" class="hidden"></div>
+        </div>
+    </section>
+
+    <!-- Kalkulator Realita (Playtime Calculator) -->
+    <section id="kalkulator" class="section">
+        <h2>Kalkulator Realita 🕒</h2>
+        <div class="calc-container">
+            <p>Berani hitung berapa banyak waktu yang kamu habiskan buat nge-game dalam setahun? Coba isi di bawah ini.</p>
+            <form id="calc-form">
+                <div class="input-group">
+                    <label>Rata-rata jam main game per hari?</label>
+                    <input type="number" id="jam-per-hari" min="0" max="24" placeholder="Misal: 4" required>
+                </div>
+                <div class="input-group">
+                    <label>Berapa hari dalam seminggu kamu main?</label>
+                    <input type="number" id="hari-per-minggu" min="0" max="7" placeholder="Misal: 7" required>
+                </div>
+                <button type="button" class="btn-primary" onclick="calculatePlaytime()">Hitung Waktu</button>
+            </form>
+            <div id="calc-result" class="hidden"></div>
+        </div>
+    </section>
+
+    <!-- Rekomendasi Game Sehat -->
+    <section id="rekomendasi" class="section">
+        <h2>Rekomendasi Game "Sehat" 🎮✨</h2>
+        <p style="text-align: center; margin-bottom: 40px; color: #cbd5e1;">
+            Nggak semua game itu toxic! Kalau dimainkan dengan seimbang, deretan game ini bisa melatih kreativitas, taktik, dan bikin pikiran lebih rileks.
+        </p>
+        
+        <div class="grid-container">
+            <!-- Game 1 -->
+            <div class="grid-item game-card">
+                <span class="badge-game">Relaksasi & Manajemen</span>
+                <img src="stardew.jpg" alt="Stardew Valley" class="game-img">
+                <h3>Stardew Valley 🌾</h3>
+                <p>Game bertani super *cozy*. Sangat ampuh buat *healing*, meredakan stres, dan melatih kesabaran dalam membangun sesuatu dari nol.</p>
+            </div>
+            
+            <!-- Game 2 -->
+            <div class="grid-item game-card">
+                <span class="badge-game">Kreativitas Tak Terbatas</span>
+                <img src="minecraft.jpg" alt="Minecraft" class="game-img">
+                <h3>Minecraft 🧱</h3>
+                <p>Kanvas digital paling bebas. Cocok untuk merancang arsitektur, bereksperimen dengan logika sirkuit, dan melatih imajinasi spasial 3D.</p>
+            </div>
+
+            <!-- Game 3 -->
+            <div class="grid-item game-card">
+                <span class="badge-game">Ekonomi & Perhitungan</span>
+                <img src="toram.jpg" alt="Toram Online" class="game-img">
+                <h3>Toram Online ⚔️</h3>
+                <p>MMORPG klasik yang melatih logika. Pemain harus memutar otak merancang kombinasi *skill* dan memahami sistem ekonomi pasar antar pemain.</p>
+            </div>
+
+            <!-- Game 4 -->
+            <div class="grid-item game-card">
+                <span class="badge-game">Taktik & Sportivitas</span>
+                <img src="haikyuu.jpg" alt="Haikyuu Fly High" class="game-img">
+                <h3>Haikyuu!! Fly High 🏐</h3>
+                <p>Game olahraga taktis. Kamu dilatih menyusun formasi yang tepat, memahami sinergi pemain, dan belajar semangat pantang menyerah.</p>
+            </div>
+
+            <!-- Game 5 -->
+            <div class="grid-item game-card">
+                <span class="badge-game">Kerja Sama & Komunikasi</span>
+                <img src="mlbb.jpg" alt="Mobile Legends" class="game-img">
+                <h3>Mobile Legends 🛡️</h3>
+                <p>Kalau dimainkan tanpa *toxic*, game MOBA ini sangat bagus untuk melatih koordinasi tim, strategi rotasi, dan pengambilan keputusan instan.</p>
+            </div>
+
+            <!-- Game 6 -->
+            <div class="grid-item game-card">
+                <span class="badge-game">Teka-Teki & Logika Ruang</span>
+                <img src="portal.jpg" alt="Portal 2" class="game-img">
+                <h3>Portal 2 🌀</h3>
+                <p>Game asah otak tingkat dewa. Memaksa kamu berpikir di luar kotak (Out of the box) dengan memanfaatkan fisika dan portal teleportasi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Game-Smart Habits -->
+    <section id="tips" class="section">
+        <h2>Game-Smart Habits 🧠</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>Set Timer ⏱️</h3>
+                <p>Gunakan alarm. Main 2 jam, istirahat 15 menit buat regangkan otot dan mata.</p>
+            </div>
+            <div class="grid-item">
+                <h3>No Device Before Sleep 🛏️</h3>
+                <p>Berhenti natap layar 30 menit sebelum tidur biar kualitas tidurmu tetap GGWP.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Touch Grass 🌱</h3>
+                <p>Cari hobi fisik. Futsal, nongkrong bareng temen, atau sekadar jalan sore.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog & Artikel -->
+    <section id="blog" class="section">
+        <h2>Digital Wellness Blog</h2>
+        <div class="card" style="text-align: center;">
+            <p>Ingin tahu fakta ilmiah dari WHO dan pakar kesehatan soal kebiasaan nge-game?</p>
+            <br>
+            <a href="artikel.html" class="btn-primary">Baca Artikel Selengkapnya</a>
+        </div>
+    </section>
+
+    <!-- Footer & Media Pendukung -->
+    <footer>
+        <h2>Join Kampanye Kita!</h2>
+        <div class="socials">
+            <a href="#">📱 Instagram: @ZenPlay.id</a>
+            <a href="#">🎵 TikTok: @ZenPlay</a>
+        </div>
+        
+        <!-- Bagian Link ke Google Form dengan QR Asli -->
+        <div class="qr-code">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3q9jeTyPvUo1TtL02ukZNE_WrnPHSWyXPFImej05jKjNaNA/viewform?usp=publish-editor" target="_blank">
+                <img src="ZENPLAY.png" alt="QR Code Kuesioner" class="qr-img">
+            </a>
+            <p style="font-size: 14px; margin-top: 10px; color: var(--primary-neon); font-weight: bold;">Untuk Kuisioner Scan atau Klik QR di atas!</p>
+        </div>
+        
+        <p>&copy; 2026 PSL04 – CYBERPSYCHOLOGY - Sistem Informasi</p>
+    </footer>
+
+    <!-- Floating Background Music -->
+    <button id="music-toggle" class="floating-btn">
+        🎵 Play Lo-Fi
+    </button>
+    <audio id="bg-music" loop>
+        <source src="lofi.mp3" type="audio/mpeg">
+        Browser kamu tidak mendukung elemen audio.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
